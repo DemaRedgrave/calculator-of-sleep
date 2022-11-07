@@ -10,6 +10,9 @@ def main():
     print('Please wait... I multiply in my mind')
     time.sleep(1.0)
     total_sleep_time = helpers.calc_sleep_time(hours, minutes)
+    if total_sleep_time == -1:
+        print("Incorrect parameters")
+        return
     print("There is how much do you sleep in the one day: {}".format(total_sleep_time))
 
 
