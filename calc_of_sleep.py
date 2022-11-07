@@ -9,11 +9,13 @@ def main():
     minutes = int(input())
     print('Please wait... I multiply in my mind')
     time.sleep(1.0)
-    total_sleep_time = helpers.calc_sleep_time(hours, minutes)
-    if total_sleep_time == -1:
-        print("Incorrect parameters")
-        return
-    print("There is how much do you sleep in the one day: {}".format(total_sleep_time))
+    
+    for h in range(1, hours):
+        total_sleep_time = helpers.calc_sleep_time(h, minutes)
+        if total_sleep_time == -1:
+            print("Incorrect parameters")
+            return
+        print("There is how much do you sleep in the one day: {}".format(total_sleep_time))
 
 
 if __name__ == "__main__":
